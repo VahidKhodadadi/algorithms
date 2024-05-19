@@ -23,12 +23,12 @@ class LinkedList:
         return self.head
 
     def getLast(self):
-        if self.head is None:
+        if self.head == None:
             return None
 
         node = self.head
         while node:
-            if node.next is None:
+            if node.next == None:
                 return node
             node = node.next
 
@@ -36,16 +36,16 @@ class LinkedList:
         self.head = None
 
     def removeFirst(self):
-        if self.head is None:
+        if self.head == None:
             return
 
         self.head = self.head.next
 
     def removeLast(self):
-        if self.head is None:
+        if self.head == None:
             return
 
-        if self.head.next is None:
+        if self.head.next == None:
             self.head = None
             return
 
@@ -77,7 +77,7 @@ class LinkedList:
         return None
 
     def removeAt(self, index):
-        if self.head is None:
+        if self.head == None:
             return
 
         if index == 0:
@@ -85,12 +85,12 @@ class LinkedList:
             return
 
         previous = self.getAt(index - 1)
-        if previous is None or previous.next is None:
+        if previous == None or previous.next == None:
             return
         previous.next = previous.next.next
 
     def insertAt(self, data, index):
-        if self.head is None:
+        if self.head == None:
             self.head = Node(data)
             return
 
